@@ -41,7 +41,15 @@
       justify-content: space-between;
       gap: 12px;
     }
+    /* NEW: make nav a flex row so buttons align perfectly */
+    header nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
     .brand {
+      display: flex;            /* ensures clean vertical centering */
+      align-items: center;
       font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
       font-weight: 700;
       font-size: clamp(18px, 2.2vw, 22px);
@@ -57,6 +65,11 @@
       border-radius: 8px;
       font-size: 14px;
       cursor: pointer;
+      line-height: 1.4;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      vertical-align: middle;   /* prevents baseline offset when inline */
     }
     .btn:focus-visible { outline: 2px solid #0000; box-shadow: 0 0 0 2px var(--line); }
     main {
@@ -113,10 +126,10 @@
   <div class="page">
     <header aria-label="Site header">
       <div class="brand">farukg<em>.com</em></div>
-        <nav>
-          <a class="btn" href="/privacy.html">Privacy Policy</a>
-          <button id="contact" class="btn" type="button" aria-label="Contact">Contact</button>
-        </nav>
+      <nav>
+        <a class="btn" href="/privacy.html">Privacy Policy</a>
+        <button id="contact" class="btn" type="button" aria-label="Contact">Contact</button>
+      </nav>
     </header>
 
     <main role="main" aria-labelledby="title">
@@ -160,8 +173,8 @@
         var positions = [
           { left: r.left - tsize.width - gap, top: r.top + (r.height - tsize.height)/2 },    // left
           { left: r.right + gap,              top: r.top + (r.height - tsize.height)/2 },    // right
-          { left: r.left + (r.width - tsize.width)/2, top: r.bottom + gap },                // below
-          { left: r.left + (r.width - tsize.width)/2, top: r.top - tsize.height - gap }     // above
+          { left: r.left + (r.width - tsize.width)/2, top: r.bottom + gap },                 // below
+          { left: r.left + (r.width - tsize.width)/2, top: r.top - tsize.height - gap }      // above
         ];
 
         var chosen = null;

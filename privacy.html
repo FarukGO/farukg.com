@@ -3,87 +3,98 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy — farukg.com</title>
-  <meta name="description" content="Privacy Policy for Tic Tac Toe (Android) by Faruk G." />
-  <meta name="robots" content="index,follow" />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <title>Privacy Policy – Tic Tac Toe by Faruk G</title>
   <style>
-    *, *::before, *::after { box-sizing: border-box; }
-    html, body { height: 100%; }
-    :root { --bg:#ffffff; --fg:#111827; --line:#e5e7eb; --muted:#6b7280; --shadow:0 10px 30px rgba(0,0,0,.08); }
-    @media (prefers-color-scheme: dark) {
-      :root { --bg:#0b0d10; --fg:#e5e7eb; --line:#1f2937; --muted:#9ca3af; --shadow:0 10px 30px rgba(0,0,0,.5); }
+    :root {
+      --bg: #ffffff;
+      --fg: #111827;
+      --line: #e5e7eb;
+      --muted: #6b7280;
     }
-    body { margin:0; background:var(--bg); color:var(--fg); font-family:ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial; line-height:1.6; }
-    .page { min-height:100%; display:grid; grid-template-rows:auto 1fr; padding: clamp(24px, 4vw, 48px); max-width:880px; margin:0 auto; }
-    header { display:flex; align-items:center; justify-content:space-between; gap:12px; }
-    .brand { font-family:ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; font-weight:700; font-size:clamp(18px,2.2vw,22px); letter-spacing:-.015em; }
-    .brand em { font-style:normal; opacity:.65; }
-    .btn { appearance:none; background:transparent; border:1px solid var(--line); color:inherit; padding:6px 12px; border-radius:8px; font-size:14px; text-decoration:none; }
-    main { display:block; padding-block: min(12vh, 140px); border-top:1px solid var(--line); border-bottom:1px solid var(--line); margin-block:28px; }
-    h1 { margin:0 0 12px 0; font-family:ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; font-weight:700; font-size:clamp(28px,4.8vw,44px); letter-spacing:-.02em; line-height:1.15; }
-    h2 { margin:28px 0 8px; font-size:20px; }
-    p, li { color:var(--fg); }
-    .muted { color:var(--muted); }
-    footer { font-size:14px; color:var(--muted); }
-    a { color: inherit; }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:#0b0d10;
+        --fg:#e5e7eb;
+        --line:#1f2937;
+        --muted:#9ca3af;
+      }
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: clamp(24px, 4vw, 48px);
+    }
+    h1, h2 {
+      font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    }
+    a { color: #0b5cff; }
+    .meta { font-size: 0.9em; color: var(--muted); margin-top: -8px; margin-bottom: 20px; }
+    .btn-home {
+      display: inline-block;
+      margin-top: 32px;
+      padding: 8px 16px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: inherit;
+      text-decoration: none;
+      font-size: 14px;
+      background: transparent;
+    }
+    .btn-home:hover {
+      background: var(--line);
+    }
   </style>
 </head>
 <body>
-  <div class="page">
-    <header aria-label="Site header">
-      <div class="brand"><a href="/" style="text-decoration:none;color:inherit">farukg<em>.com</em></a></div>
-      <nav><a class="btn" href="/privacy.html">Privacy Policy</a></nav>
-    </header>
+  <h1>Privacy Policy</h1>
+  <p class="meta"><em>Effective: 21 September 2025</em></p>
 
-    <main role="main" aria-labelledby="title">
-      <h1 id="title">Privacy Policy</h1>
-      <p class="muted">Effective: <strong>15 September 2025</strong></p>
+  <p><strong>Tic Tac Toe</strong> (“the App”) is developed by <strong>Faruk G</strong>. This page explains how data is handled when you use the App.</p>
 
-      <p>This Privacy Policy describes how <strong>Tic Tac Toe</strong> (“the App”) handles information. The App is published by <strong>Faruk G.</strong> (“we”, “us”). If you have questions, contact <a href="mailto:farukg.dev@gmail.com">farukg.dev@gmail.com</a>.</p>
+  <h2>What data we collect</h2>
+  <p>We do not collect or store any personal information such as your name, email, or account details.</p>
+  <p>The App uses third-party services that may collect limited data automatically:</p>
+  <ul>
+    <li><strong>Google AdMob</strong> – to show ads. Depending on your region and choices, ads may be personalized or non-personalized. Uses device/advertising identifiers and IP address.</li>
+    <li><strong>Firebase Analytics</strong> – to collect anonymous usage statistics (e.g. which screens are opened) to improve the App.</li>
+    <li><strong>Firebase Crashlytics</strong> – to collect crash reports so we can fix errors and improve stability.</li>
+  </ul>
 
-      <h2>Information We Collect</h2>
-      <ul>
-        <li><strong>Ads &amp; Analytics Data</strong>: The App uses Google services (e.g., AdMob) that may collect device identifiers, IP address, approximate location, and usage data to provide and measure ads and to combat fraud.</li>
-        <li><strong>Crash/Performance Data</strong>: If enabled (e.g., Firebase), crash reports and diagnostics may be collected to improve stability.</li>
-        <li><strong>No Account Data</strong>: The App does not require you to create an account and does not collect names, email addresses, or precise location.</li>
-      </ul>
+  <h2>How data is used</h2>
+  <ul>
+    <li>To display ads and measure ad performance (AdMob).</li>
+    <li>To understand general usage trends (Firebase Analytics).</li>
+    <li>To diagnose crashes and bugs (Crashlytics).</li>
+  </ul>
 
-      <h2>Advertising &amp; Consent (EEA/UK)</h2>
-      <p>We use Google’s <strong>User Messaging Platform (UMP)</strong> to obtain consent where required by law (e.g., GDPR in the EEA/UK). On first launch, users in applicable regions will see a consent dialog to choose how ads are personalized. You can change your choice anytime from the App’s <em>Settings → Privacy options</em>.</p>
+  <h2>Consent and choices</h2>
+  <p>The App uses Google’s <em>User Messaging Platform (UMP)</em> to request consent where required by law:</p>
+  <ul>
+    <li><strong>European Union / UK (GDPR):</strong> On first launch, a consent form lets you accept or refuse personalized ads. Refusing still allows ads, but they will be non-personalized.</li>
+    <li><strong>United States (CPRA/CCPA and similar laws):</strong> In applicable states, you may opt out of sale/sharing of data through a consent form.</li>
+  </ul>
+  <p>You can revisit your choice at any time in the App’s <strong>Settings → Privacy options</strong> menu (where required by law).</p>
 
-      <h2>Service Providers</h2>
-      <ul>
-        <li><strong>Google AdMob</strong> — mobile advertising. See Google’s partners and data usage: <a href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a>.</li>
-        <li><strong>Google/Firebase</strong> (optional) — analytics/crash reporting: <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>.</li>
-      </ul>
+  <h2>Your rights</h2>
+  <p>Depending on your location, you may have rights to access, delete, or restrict data processing. Because we do not store personal data ourselves, these rights apply mainly to Google’s processing. See:</p>
+  <ul>
+    <li><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">How Google uses data in ads</a></li>
+    <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase privacy</a></li>
+  </ul>
 
-      <h2>Data Retention</h2>
-      <p>We do not store personal data on our servers. Third-party services retain data per their policies.</p>
+  <h2>Children</h2>
+  <p>The App is not directed to children under 13 (or the minimum age in your jurisdiction). We do not knowingly collect data from children.</p>
 
-      <h2>Your Choices</h2>
-      <ul>
-        <li><strong>Consent</strong>: In the EEA/UK, manage consent via <em>Settings → Privacy options</em> in the App.</li>
-        <li><strong>Limit Ad Personalization</strong>: You can reset or limit your device’s advertising ID in Android settings.</li>
-        <li><strong>Opt-Outs</strong>: See Google’s ad settings and opt-out tools at <a href="https://adssettings.google.com/">adssettings.google.com</a>.</li>
-      </ul>
+  <h2>Contact</h2>
+  <p>If you have questions about this policy, please contact: <a href="mailto:farukg.dev@gmail.com">farukg.dev@gmail.com</a></p>
 
-      <h2>Children</h2>
-      <p>The App is not directed to children under 16 in the EEA/UK (or the relevant age in your country). We configure UMP/AdMob to respect under-age settings.</p>
+  <p><em>Last updated: 21 September 2025</em></p>
 
-      <h2>Security</h2>
-      <p>We follow reasonable practices to protect information handled by the App and its service providers.</p>
-
-      <h2>Changes</h2>
-      <p>We may update this policy. Changes take effect when posted on this page. We will update the “Effective” date above.</p>
-
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:farukg.dev@gmail.com">farukg.dev@gmail.com</a></p>
-    </main>
-
-    <footer>
-      <p><a href="/">← Back to farukg.com</a></p>
-    </footer>
-  </div>
+  <a href="/" class="btn-home">← Back to Home</a>
 </body>
 </html>
