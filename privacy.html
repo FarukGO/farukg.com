@@ -1,100 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy – Tic Tac Toe by Faruk G</title>
+  <meta charset="utf-8">
+  <title>Tic Tac Toe – Privacy Policy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    :root {
-      --bg: #ffffff;
-      --fg: #111827;
-      --line: #e5e7eb;
-      --muted: #6b7280;
+    :root{
+      --bg:#0c0f14; --card:#11151b; --ink:#e7ecf3; --muted:#9fb0c3; --line:#1f2a36; --accent:#4da3ff;
     }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg:#0b0d10;
-        --fg:#e5e7eb;
-        --line:#1f2937;
-        --muted:#9ca3af;
-      }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#ffffff; --card:#f7f9fc; --ink:#0d1b2a; --muted:#52667a; --line:#e6edf5; --accent:#0b5cff; }
     }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--fg);
-      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      max-width: 880px;
-      margin: 0 auto;
-      padding: clamp(24px, 4vw, 48px);
-    }
-    h1, h2 {
-      font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-    }
-    a { color: #0b5cff; }
-    .meta { font-size: 0.9em; color: var(--muted); margin-top: -8px; margin-bottom: 20px; }
-    .btn-home {
-      display: inline-block;
-      margin-top: 32px;
-      padding: 8px 16px;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      color: inherit;
-      text-decoration: none;
-      font-size: 14px;
-      background: transparent;
-    }
-    .btn-home:hover {
-      background: var(--line);
-    }
+    *{ box-sizing:border-box }
+    body{ margin:0; background:var(--bg); color:var(--ink); font:16px/1.65 ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif }
+    .wrap{ max-width:880px; margin:auto; padding:clamp(24px,4vw,48px) }
+    h1{ font:700 2rem/1.2 ui-serif,Georgia,serif; margin:.25rem 0 0 }
+    .meta{ color:var(--muted); margin:.25rem 0 1.25rem }
+    h2{ font:700 1.15rem/1.3 ui-serif,Georgia,serif; margin:2rem 0 .75rem }
+    p,li{ margin:.5rem 0 }
+    a{ color:var(--accent); text-decoration:none }
+    a:hover{ text-decoration:underline }
+    .card{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 18px; }
+    .grid{ display:grid; gap:12px; grid-template-columns:1fr; }
+    @media (min-width:720px){ .grid{ grid-template-columns:1fr 1fr; } }
+    .note{ color:var(--muted); font-size:.95rem }
+    .footer{ margin-top:32px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem }
   </style>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
-  <p class="meta"><em>Effective: 21 September 2025</em></p>
+  <main class="wrap">
+    <h1>Privacy Policy</h1>
+    <p class="meta"><em>Effective: 23 October 2025</em></p>
 
-  <p><strong>Tic Tac Toe</strong> (“the App”) is developed by <strong>Faruk G</strong>. This page explains how data is handled when you use the App.</p>
+    <p><strong>Tic Tac Toe</strong> (the “App”) is published by <strong>Faruk&nbsp;G</strong> (“we”, “us”). This policy explains what data is processed when you use the App, why, who processes it, and your choices.</p>
 
-  <h2>What data we collect</h2>
-  <p>We do not collect or store any personal information such as your name, email, or account details.</p>
-  <p>The App uses third-party services that may collect limited data automatically:</p>
-  <ul>
-    <li><strong>Google AdMob</strong> – to show ads. Depending on your region and choices, ads may be personalized or non-personalized. Uses device/advertising identifiers and IP address.</li>
-    <li><strong>Firebase Analytics</strong> – to collect anonymous usage statistics (e.g. which screens are opened) to improve the App.</li>
-    <li><strong>Firebase Crashlytics</strong> – to collect crash reports so we can fix errors and improve stability.</li>
-  </ul>
+    <h2>Quick summary</h2>
+    <div class="card">
+      <ul>
+        <li>No accounts; game data is stored locally on your device.</li>
+        <li>We show ads (AdMob) and use Firebase services for analytics, diagnostics, and performance.</li>
+        <li>In regions that require it, we use Google’s User Messaging Platform (UMP) to request consent and honor your choices. You can revisit them in <strong>Settings → Privacy &amp; Consent</strong>.</li>
+      </ul>
+    </div>
 
-  <h2>How data is used</h2>
-  <ul>
-    <li>To display ads and measure ad performance (AdMob).</li>
-    <li>To understand general usage trends (Firebase Analytics).</li>
-    <li>To diagnose crashes and bugs (Crashlytics).</li>
-  </ul>
+    <h2>Data we process</h2>
+    <div class="grid">
+      <div class="card">
+        <strong>On-device only</strong>
+        <p>Game progress, settings, and preferences are saved locally (Android DataStore). We don’t upload this to our servers.</p>
+      </div>
+      <div class="card">
+        <strong>Advertising (AdMob)</strong>
+        <p>Advertising ID, IP address, device/OS info, approximate location (from IP), and ad interactions are used to display and measure ads and prevent fraud. Your choices (via UMP or system settings) control whether ads are personalized.</p>
+      </div>
+      <div class="card">
+        <strong>Analytics (Firebase)</strong>
+        <p>App Instance ID and event data (e.g., screen views) help us understand usage and improve gameplay. Behavior follows your consent where required.</p>
+      </div>
+      <div class="card">
+        <strong>Diagnostics (Crashlytics &amp; Performance)</strong>
+        <p>Crash reports and performance metrics help us find and fix problems and optimize performance. Where required, we enable these only when you grant analytics consent.</p>
+      </div>
+    </div>
 
-  <h2>Consent and choices</h2>
-  <p>The App uses Google’s <em>User Messaging Platform (UMP)</em> to request consent where required by law:</p>
-  <ul>
-    <li><strong>European Union / UK (GDPR):</strong> On first launch, a consent form lets you accept or refuse personalized ads. Refusing still allows ads, but they will be non-personalized.</li>
-    <li><strong>United States (CPRA/CCPA and similar laws):</strong> In applicable states, you may opt out of sale/sharing of data through a consent form.</li>
-  </ul>
-  <p>You can revisit your choice at any time in the App’s <strong>Settings → Privacy options</strong> menu (where required by law).</p>
+    <h2>Why we process data</h2>
+    <ul>
+      <li>Provide and improve core features (game state, UI/UX).</li>
+      <li>Display ads and measure ad performance (interstitial and rewarded).</li>
+      <li>Detect, prevent, and address crashes, abuse, or technical issues.</li>
+    </ul>
 
-  <h2>Your rights</h2>
-  <p>Depending on your location, you may have rights to access, delete, or restrict data processing. Because we do not store personal data ourselves, these rights apply mainly to Google’s processing. See:</p>
-  <ul>
-    <li><a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">How Google uses data in ads</a></li>
-    <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase privacy</a></li>
-  </ul>
+    <h2>Your choices</h2>
+    <ul>
+      <li><strong>Consent &amp; preferences:</strong> Open <em>Settings → Privacy &amp; Consent</em> in the App to review or change choices (where available).</li>
+      <li><strong>Advertising ID:</strong> Reset or limit ad tracking in Android system settings.</li>
+    </ul>
 
-  <h2>Children</h2>
-  <p>The App is not directed to children under 13 (or the minimum age in your jurisdiction). We do not knowingly collect data from children.</p>
+    <h2>Legal bases &amp; regional notes</h2>
+    <p>In the EEA/UK we rely on <strong>consent</strong> for ads and analytics. If you don’t consent, we show non-personalized ads and disable personalized ad signals. In US states with privacy laws governing targeted advertising, use the in-app privacy options to opt out of personalized ads.</p>
 
-  <h2>Contact</h2>
-  <p>If you have questions about this policy, please contact: <a href="mailto:farukg.dev@gmail.com">farukg.dev@gmail.com</a></p>
+    <h2>Sharing</h2>
+    <p>We share data only with service providers that enable the App (primarily Google AdMob and Firebase). We don’t sell personal information. Personalized advertising may be deemed “sharing” under some laws; you can opt out via the in-app privacy options.</p>
 
-  <p><em>Last updated: 21 September 2025</em></p>
+    <h2>Retention</h2>
+    <p>We don’t keep your game data on our servers. Third-party providers retain data under their policies/settings (examples: Crashlytics ≈90 days; Firebase Analytics 2–14 months; Firebase Performance ≈30–60 days).</p>
 
-  <a href="/" class="btn-home">← Back to Home</a>
+    <h2>International transfers</h2>
+    <p>Google may process data on servers outside your country (e.g., the US). See Google/Firebase privacy documentation for transfer safeguards.</p>
+
+    <h2>Children</h2>
+    <p>The App is intended for users aged <strong>13 and over</strong> and is not directed to children under 13. If you believe a child under 13 has used the App, contact us and we’ll work with our providers to address it.</p>
+
+    <h2>Third-party policies</h2>
+    <ul>
+      <li><a href="https://policies.google.com/technologies/partner-sites" rel="noopener" target="_blank">How Google uses information from sites or apps that use our services</a></li>
+      <li><a href="https://firebase.google.com/support/privacy" rel="noopener" target="_blank">Firebase Privacy &amp; Security</a></li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:farukg.dev@gmail.com">farukg.dev@gmail.com</a></p>
+
+    <div class="footer">
+      <p>We may update this policy; we’ll post changes here with a new effective date.</p>
+    </div>
+  </main>
 </body>
 </html>
