@@ -1,0 +1,40 @@
+<!-- assets/images/site-icon.svg -->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 32 32"
+>
+  <rect
+    x="2"
+    y="2"
+    width="28"
+    height="28"
+    rx="8"
+    fill="#05070A"
+  />
+  <rect
+    x="3.5"
+    y="3.5"
+    width="25"
+    height="25"
+    rx="7"
+    fill="#060913"
+    stroke="#111827"
+    stroke-width="1.5"
+  />
+  <path
+    d="M11 20.5V11h6.5"
+    fill="none"
+    stroke="#4FD1C5"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M15 16h3.5v4.5"
+    fill="none"
+    stroke="#4FD1C5"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>

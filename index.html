@@ -1,228 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>farukg.com</title>
-  <meta name="description" content="farukg.com" />
-  <meta name="robots" content="index,follow" />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; }
-    html, body { height: 100%; }
-    :root {
-      --bg: #ffffff;
-      --fg: #111827;
-      --line: #e5e7eb;
-      --muted: #6b7280;
-      --shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
-    @media (prefers-color-scheme: dark) {
-      :root { --bg:#0b0d10; --fg:#e5e7eb; --line:#1f2937; --muted:#9ca3af; --shadow: 0 10px 30px rgba(0,0,0,0.5); }
-    }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--fg);
-      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      line-height: 1.6;
-    }
-    .page {
-      min-height: 100%;
-      display: grid;
-      grid-template-rows: auto 1fr;
-      padding: clamp(24px, 4vw, 48px);
-      max-width: 880px;
-      margin: 0 auto;
-    }
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
-    /* NEW: make nav a flex row so buttons align perfectly */
-    header nav {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .brand {
-      display: flex;            /* ensures clean vertical centering */
-      align-items: center;
-      font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-      font-weight: 700;
-      font-size: clamp(18px, 2.2vw, 22px);
-      letter-spacing: -0.015em;
-    }
-    .brand em { font-style: normal; opacity: .65; }
-    .btn {
-      appearance: none;
-      background: transparent;
-      border: 1px solid var(--line);
-      color: inherit;
-      padding: 6px 12px;
-      border-radius: 8px;
-      font-size: 14px;
-      cursor: pointer;
-      line-height: 1.4;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      vertical-align: middle;   /* prevents baseline offset when inline */
-    }
-    .btn:focus-visible { outline: 2px solid #0000; box-shadow: 0 0 0 2px var(--line); }
-    main {
-      display: grid;
-      align-content: center;
-      padding-block: min(20vh, 180px);
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      margin-block: 28px;
-      gap: 12px;
-    }
-    h1 { margin: 0; font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-         font-weight: 700; font-size: clamp(36px, 6.2vw, 68px); letter-spacing: -0.02em; line-height: 1.08; }
-    .subtle { margin: 0; font-size: clamp(14px, 2.2vw, 16px); opacity: .7; max-width: 60ch; }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Faruk Gokceoglu – Android developer</title>
+    <meta
+      name="description"
+      content="Portfolio of Faruk Gokceoglu, Android developer shipping small, minimalist apps — on the path to bigger ideas. Featuring a Tic Tac Toe app with Classic, Ultimate, and Infinite modes."
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/images/site-icon.svg" />
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <div class="page">
+      <!-- Header -->
+      <header class="site-header">
+        <div class="wrap">
+          <div class="header-inner">
+            <div class="brand">farukg<em>.com</em></div>
+            <nav class="header-nav">
+              <a href="#contact" class="header-link">Contact</a>
+            </nav>
+          </div>
+        </div>
+      </header>
 
-    /* Smart toast */
-    .toast {
-      position: fixed;
-      background: var(--bg);
-      color: var(--fg);
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 8px 12px;
-      box-shadow: var(--shadow);
-      font-size: 14px;
-      display: none;
-      align-items: center;
-      gap: 8px;
-      z-index: 999;
-      white-space: nowrap;
-      max-width: calc(100vw - 16px);
-    }
-    .toast.show { display: inline-flex; }
-    .toast code {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      font-size: 0.95em;
-      border: 1px solid var(--line);
-      padding: 2px 6px;
-      border-radius: 6px;
-    }
-    .toast .x {
-      border: none;
-      background: transparent;
-      color: inherit;
-      cursor: pointer;
-      font-size: 14px;
-      opacity: .6;
-      padding: 0 2px;
-    }
-    .toast .x:hover { opacity: .9; }
-  </style>
-</head>
-<body>
-  <div class="page">
-    <header aria-label="Site header">
-      <div class="brand">farukg<em>.com</em></div>
-      <nav>
-        <button id="contact" class="btn" type="button" aria-label="Contact">Contact</button>
-      </nav>
-    </header>
+      <main>
+        <!-- Intro -->
+        <section class="section intro">
+          <div class="wrap">
+            <h1>Faruk Gokceoglu</h1>
+            <p class="intro-tagline">
+              Android developer shipping small, minimalist apps — on the path to bigger ideas.
+            </p>
+          </div>
+        </section>
 
-    <main role="main" aria-labelledby="title">
-      <h1 id="title">Blank by design.</h1>
-      <p class="subtle">Space speaks louder than clutter.</p>
-    </main>
-  </div>
+        <!-- Featured app -->
+        <section class="section project" id="project">
+          <div class="wrap">
+            <h2 class="section-heading">Featured app</h2>
 
-  <div id="toast" class="toast" role="status" aria-live="polite" aria-atomic="true">
-    <span>Email copied:</span>
-    <code>farukg.dev@gmail.com</code>
-    <button class="x" aria-label="Dismiss">×</button>
-  </div>
+            <!-- Summary card -->
+            <article class="project-summary">
+              <div class="project-summary-main">
+                <div class="project-icon">
+                  <img src="assets/images/app-icon.png" alt="Tic Tac Toe app icon" />
+                </div>
+                <div class="project-summary-text">
+                  <p class="project-label">ANDROID · CLOSED TESTING</p>
+                  <h3 class="project-name">Tic Tac Toe – Ultimate &amp; Infinite</h3>
+                  <p class="project-one-liner">Three modes in one minimal app: Classic, Ultimate, and Infinite.</p>
+                </div>
+              </div>
 
-  <script>
-    (function() {
-      var email = 'farukg.dev@gmail.com';
-      var btn = document.getElementById('contact');
-      var toast = document.getElementById('toast');
-      var close = toast.querySelector('.x');
-      var hideTimer = null;
+              <div class="project-summary-actions">
+                <a
+                  href="https://github.com/FarukGO/farukg.com/releases/download/v1.0.0-beta.1/app-release.apk"
+                  class="btn btn-primary"
+                >
+                  Download APK
+                </a>
+              </div>
 
-      function clamp(val, min, max) { return Math.max(min, Math.min(max, val)); }
+              <!-- Tech pills (no "Stack" label) -->
+              <div class="project-tech">
+                <div class="pill-row">
+                  <span class="pill">Kotlin</span>
+                  <span class="pill">Jetpack Compose</span>
+                  <span class="pill">MVVM</span>
+                  <span class="pill">Hilt</span>
+                  <span class="pill">Coroutines &amp; Flow</span>
+                  <span class="pill">DataStore &amp; SharedPreferences</span>
+                  <span class="pill">Firebase (Analytics, Crashlytics, Remote Config)</span>
+                  <span class="pill">AdMob + UMP</span>
+                  <span class="pill">Baseline Profiles</span>
+                </div>
+              </div>
+            </article>
 
-      function measureToast() {
-        toast.style.visibility = 'hidden';
-        toast.classList.add('show');
-        var _r = toast.getBoundingClientRect();
-        toast.classList.remove('show');
-        toast.style.visibility = '';
-        return { width: _r.width, height: _r.height };
-      }
+            <!-- Attached body: text + screens -->
+            <div class="project-body">
+              <div class="project-text">
+                <p>
+                  The app is meant to feel quiet: minimal UI and only a few screens. The board stays in focus with very
+                  little around it.
+                </p>
+                <p>
+                  It includes offline AI with multiple difficulty levels and local multiplayer against another human.
+                </p>
 
-      function positionToastSmart() {
-        var r = btn.getBoundingClientRect();
-        var vw = window.innerWidth, vh = window.innerHeight;
-        var gap = 12, margin = 8;
-        var tsize = measureToast();
+                <h3>Modes</h3>
+                <ul class="project-modes">
+                  <li>
+                    <strong>Classic:</strong>
+                    standard 3×3 Tic Tac Toe for quick games.
+                  </li>
+                  <li>
+                    <strong>Ultimate:</strong>
+                    nine small boards form one larger board. Each move sends the opponent to a specific board; win small
+                    boards to claim the big board.
+                  </li>
+                  <li>
+                    <strong>Infinite:</strong>
+                    a 3×3 board where marks age and disappear. From the 4th move onward, the oldest mark cycles off so
+                    positions keep changing and games don’t end in draws.
+                  </li>
+                </ul>
+              </div>
 
-        // order: left -> right -> below -> above
-        var positions = [
-          { left: r.left - tsize.width - gap, top: r.top + (r.height - tsize.height)/2 },    // left
-          { left: r.right + gap,              top: r.top + (r.height - tsize.height)/2 },    // right
-          { left: r.left + (r.width - tsize.width)/2, top: r.bottom + gap },                 // below
-          { left: r.left + (r.width - tsize.width)/2, top: r.top - tsize.height - gap }      // above
-        ];
+              <!-- Screenshots -->
+              <div class="project-screens">
+                <h3>Screens</h3>
+                <div class="screen-strip" aria-label="App screenshots">
+                  <figure class="screen-item">
+                    <div class="screen-frame">
+                      <img src="assets/images/screen-classic.png" alt="Classic mode board" />
+                    </div>
+                    <figcaption>Classic board</figcaption>
+                  </figure>
 
-        var chosen = null;
-        for (var i=0; i<positions.length; i++) {
-          var p = positions[i];
-          if (p.left >= margin &&
-              p.top >= margin &&
-              p.left + tsize.width <= vw - margin &&
-              p.top + tsize.height <= vh - margin) { chosen = p; break; }
-        }
-        if (!chosen) {
-          var p = positions[2];
-          chosen = {
-            left: clamp(p.left, margin, vw - margin - tsize.width),
-            top:  clamp(p.top,  margin, vh - margin - tsize.height)
-          };
-        }
+                  <figure class="screen-item">
+                    <div class="screen-frame">
+                      <img src="assets/images/screen-ultimate.png" alt="Ultimate mode board" />
+                    </div>
+                    <figcaption>Ultimate board</figcaption>
+                  </figure>
 
-        toast.style.left = Math.round(chosen.left + window.scrollX) + 'px';
-        toast.style.top  = Math.round(chosen.top  + window.scrollY) + 'px';
-      }
+                  <figure class="screen-item">
+                    <div class="screen-frame">
+                      <img src="assets/images/screen-infinite.png" alt="Infinite mode board" />
+                    </div>
+                    <figcaption>Infinite board</figcaption>
+                  </figure>
 
-      function showToast() {
-        positionToastSmart();
-        toast.classList.add('show');
-        clearTimeout(hideTimer);
-        hideTimer = setTimeout(hideToast, 1800);
-      }
+                  <figure class="screen-item">
+                    <div class="screen-frame">
+                      <img src="assets/images/screen-setup.png" alt="Home screen with mode and difficulty sheet" />
+                    </div>
+                    <figcaption>Home with setup sheet</figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
 
-      function hideToast() { toast.classList.remove('show'); }
+            <!-- Nerdy details, collapsed by default -->
+            <details class="project-notes">
+              <summary>
+                <span class="notes-chevron" aria-hidden="true">
+                  <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
+                    <polyline
+                      points="3 4.5 6 7.5 9 4.5"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+                <span class="notes-label">Technical notes</span>
+              </summary>
+              <ul>
+                <li>Ultimate mode AI uses a neural Monte Carlo Tree Search.</li>
+                <li>Infinite mode uses a custom perfect-play engine tailored to the aging-board rules.</li>
+                <li>
+                  During development, a specific forced-win strategy in Infinite mode was discovered; an optional
+                  opening rule in Settings can disable that strategy.
+                </li>
+              </ul>
+            </details>
+          </div>
+        </section>
 
-      function copyEmail() {
-        if (!navigator.clipboard) return Promise.reject();
-        return navigator.clipboard.writeText(email);
-      }
+        <!-- Contact -->
+        <section class="section contact" id="contact">
+          <div class="wrap">
+            <h2>Contact</h2>
 
-      window.addEventListener('resize', function(){ if (toast.classList.contains('show')) positionToastSmart(); });
-      window.addEventListener('scroll', function(){ if (toast.classList.contains('show')) positionToastSmart(); });
+            <div class="contact-row">
+              <span class="contact-label">Email</span>
+              <div class="contact-info">
+                <a href="mailto:farukg.dev@gmail.com" class="contact-email" id="contact-email">
+                  farukg.dev@gmail.com
+                </a>
+                <button class="copy-btn" id="copy-email-btn" type="button">Copy</button>
+                <span class="copy-status" id="copy-status" aria-live="polite"></span>
+              </div>
+            </div>
 
-      document.addEventListener('keydown', function(e) { if (e.key === 'Escape') hideToast(); });
-      close.addEventListener('click', hideToast);
+            <div class="contact-row">
+              <span class="contact-label">LinkedIn</span>
+              <div class="contact-info">
+                <a href="https://www.linkedin.com/in/farukgdev" target="_blank" rel="noreferrer"> /farukgdev </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
 
-      btn.addEventListener('click', function() {
-        copyEmail().finally(showToast);
-        setTimeout(function() {
-          window.location.href = 'mailto:' + encodeURIComponent(email);
-        }, 50);
-      });
-    })();
-  </script>
-</body>
+      <footer class="site-footer">
+        <div class="wrap footer-inner">
+          <span>© 2025 Faruk Gokceoglu</span>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>

@@ -1,0 +1,602 @@
+/* Reset & base */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Tell the browser: only use the light color scheme, don't auto-darken (otherwise color of some elements like app icon changes...)  */
+  color-scheme: only light;
+  /* Base neutrals */
+  --bg: #070708;             /* page + footer background */
+  --bg-rgb: 7, 7, 8;         /* same as --bg, for rgba usage */
+  --bg-alt: #0d0e11;         /* cards, frames */
+  --pill-bg: #090a0e;        /* pills: slightly darker than card */
+  --pill-border: #23252f;    /* pills: soft outline, lighter than pill bg */
+  --border-subtle: #15161c;  /* global borders, dividers, scrollbar thumb */
+
+  /* Header */
+  --header-bg: rgba(var(--bg-rgb), 0.96); /* sticky header background */
+
+  /* Text */
+  --text-main: #e5e7eb;      /* primary text */
+  --text-muted: #9ca3af;     /* secondary text */
+  --text-label: #6b7280;     /* labels, meta */
+
+  /* Accent (Download APK) – darker, more muted teal */
+  --accent: #1f7f74;         /* primary accent */
+  --accent-hover: #19655c;   /* accent hover */
+  --accent-text: #e5e7eb;    /* text on accent */
+
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  background-color: var(--bg);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font-family: inherit;
+}
+
+.btn,
+.header-link,
+.copy-btn {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Never underline header/primary buttons, even on focus/active */
+.header-link,
+.header-link:link,
+.header-link:visited,
+.header-link:focus,
+.header-link:active {
+  text-decoration: none;
+}
+
+/* Pressed state for header Contact */
+.header-link:active {
+  background-color: var(--border-subtle);
+  color: var(--text-main);
+}
+
+/* html,
+body {
+  overscroll-behavior-y: none;
+} */
+
+/* Layout */
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 72px 0;
+}
+
+/* Header */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--border-subtle);
+  background-color: var(--header-bg);
+  backdrop-filter: blur(14px);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+/* Brand using serif */
+
+.brand {
+  display: flex;
+  align-items: center;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: clamp(18px, 2.2vw, 22px);
+  letter-spacing: -0.015em;
+  color: var(--text-main);
+}
+
+.brand em {
+  font-style: normal;
+  opacity: 0.65;
+}
+
+.header-nav {
+  display: flex;
+  gap: 8px;
+}
+
+.header-link {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+/* Intro */
+
+.intro h1 {
+  margin: 0 0 10px;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: clamp(32px, 5vw, 40px);
+  letter-spacing: -0.02em;
+}
+
+.intro-tagline {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+/* Section heading */
+
+.section-heading {
+  margin: 0 0 18px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-label);
+}
+
+/* Project summary card */
+
+.project-summary {
+  border-radius: 22px;
+  border: 1px solid var(--border-subtle);
+  background-color: var(--bg-alt);
+  padding: 28px 26px;
+}
+
+.project-summary-main {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.project-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+.project-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-summary-text {
+  min-width: 0;
+}
+
+.project-label {
+  margin: 0 0 4px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-label);
+}
+
+.project-name {
+  margin: 0 0 6px;
+  font-size: 1.24rem;
+}
+
+.project-one-liner {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-main);
+}
+
+/* Buttons */
+
+.project-summary-actions {
+  margin-top: 18px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 150ms ease-out, color 150ms ease-out,
+    border-color 150ms ease-out, transform 120ms ease-out;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: var(--accent-text);
+  font-weight: 500;
+}
+
+.btn,
+.btn:link,
+.btn:visited,
+.btn:focus,
+.btn:active {
+  text-decoration: none;
+}
+
+/* Custom pressed state that works on touch + mouse */
+.btn-primary:active {
+  background-color: var(--accent-hover); /* slightly darker teal */
+  transform: translateY(0);              /* cancel hover lift if any */
+}
+
+/* Tech pills (no label) */
+
+.project-tech {
+  margin-top: 16px; /* a bit more breathing room under the button */
+}
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  font-size: 0.8rem;
+  border-radius: 999px;
+  padding: 4px 10px;
+  border: 1px solid var(--pill-border);
+  background-color: var(--pill-bg);
+  color: var(--text-muted);
+}
+
+/* Project body (text + screens) */
+
+.project-body {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.project-text {
+  flex: 1 1 260px;
+  min-width: 0;
+}
+
+.project-text p {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  color: var(--text-main);
+  line-height: 1.7;
+}
+
+.project-text h3 {
+  margin: 14px 0 6px;
+  font-size: 1rem;
+}
+
+.project-modes {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.project-modes li {
+  margin-bottom: 4px;
+}
+
+/* Screens */
+
+.project-screens {
+  flex: 1 1 260px;
+  min-width: 0;
+}
+
+.project-screens h3 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+
+.screen-strip {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+  cursor: grab;
+}
+
+.screen-strip:active {
+  cursor: grabbing;
+}
+
+.screen-strip::-webkit-scrollbar {
+  height: 6px;
+}
+
+.screen-strip::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.screen-strip::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 999px;
+}
+
+.screen-item {
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+.screen-frame {
+  border-radius: 22px;
+  border: 1px solid var(--border-subtle);
+  background-color: var(--bg-alt);
+  overflow: hidden;
+}
+
+.screen-frame img {
+  width: 230px;
+  height: auto;
+}
+
+.screen-item figcaption {
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: left;
+}
+
+/* Technical notes */
+
+.project-notes {
+  margin-top: 24px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.project-notes summary {
+  cursor: pointer;
+  list-style: none;
+  letter-spacing: 0.04em;
+  font-size: 0.9rem;
+  color: var(--text-label);
+  margin-bottom: 6px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* hide default marker */
+.project-notes summary::-webkit-details-marker {
+  display: none;
+}
+
+/* chevron icon */
+.notes-chevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.4rem;
+  transform: rotate(-90deg); /* closed: pointing right */
+  transition: transform 150ms ease-out;
+}
+
+/* when open: chevron points down */
+.project-notes[open] .notes-chevron {
+  transform: rotate(0deg);
+}
+
+/* keep the text label next to the chevron */
+.notes-label {
+  display: inline-block;
+}
+
+.project-notes[open] summary {
+  margin-bottom: 8px;
+}
+
+.project-notes ul {
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.7;
+}
+
+/* Contact */
+
+.contact h2 {
+  margin: 0 0 12px;
+  font-size: 1.4rem;
+}
+
+.contact-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.contact-label {
+  width: 90px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-label);
+}
+
+.contact-info {
+  flex: 1;
+  font-size: 1rem;
+  color: var(--text-main);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+/* underline all contact links consistently */
+.contact-info a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.copy-btn {
+  border-radius: 999px;
+  border: 1px solid var(--pill-border);
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  background-color: var(--pill-bg);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background-color 120ms ease-out, color 120ms ease-out,
+    border-color 120ms ease-out;
+}
+
+.copy-btn.is-pressed {
+  border-color: var(--border-subtle);
+  background-color: var(--pill-bg);  /* same as desktop hover */
+  color: var(--text-main);
+}
+
+/* Hover effects only on devices that actually support hover (no sticky hover on touch) */
+@media (hover: hover) and (pointer: fine) {
+  .header-link:hover {
+    color: var(--text-main);
+    background-color: var(--border-subtle);
+    text-decoration: none;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-1px);
+    text-decoration: none;
+  }
+
+  .copy-btn:hover {
+    border-color: var(--border-subtle);
+    background-color: var(--pill-bg);  /* same as pill */
+    color: var(--text-main);
+  }
+}
+
+.copy-status {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Footer */
+
+.site-footer {
+  border-top: 1px solid var(--border-subtle);
+  padding: 18px 0 22px;
+  background-color: var(--bg);
+  margin-top: auto;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--text-label);
+}
+
+/* Responsive */
+
+@media (max-width: 740px) {
+  .section {
+    padding: 56px 0;
+  }
+
+  .intro h1 {
+    font-size: clamp(28px, 6vw, 32px);
+  }
+
+  .project-summary {
+    padding: 22px 18px;
+    border-radius: 20px;
+  }
+
+  .project-summary-main {
+    align-items: flex-start;
+  }
+
+  .project-body {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .screen-frame img {
+    width: 210px;
+  }
+
+  .contact-row {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px; /* extra separation between rows on mobile */
+  }
+
+  .contact-label {
+    width: auto;
+  }
+}
