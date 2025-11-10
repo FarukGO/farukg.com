@@ -26,8 +26,8 @@
   --text-label: #6b7280;     /* labels, meta */
 
   /* Accent (Download APK) – darker, more muted teal */
-  --accent: #1f7f74;         /* primary accent */
-  --accent-hover: #19655c;   /* accent hover */
+  --accent: #197d9a;       /* primary accent */
+  --accent-hover: #145f79; /* slightly darker on hover */
   --accent-text: #e5e7eb;    /* text on accent */
 
 }
@@ -598,5 +598,195 @@ body {
 
   .contact-label {
     width: auto;
+  }
+}
+
+/* ========================
+   Page: Privacy Policy (/privacy)
+========================= */
+
+.privacy-page main {
+  flex: 1;
+}
+
+/* Main section wrapper */
+
+.privacy-section {
+  padding-top: 56px;
+  padding-bottom: 72px;
+}
+
+/* Top header area */
+
+.privacy-header {
+  margin-bottom: 28px;
+}
+
+.privacy-title {
+  margin: 0 0 8px;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 32px);
+  letter-spacing: -0.02em;
+}
+
+.privacy-meta {
+  margin: 0 0 16px;
+  font-size: 0.9rem;
+  color: var(--text-label);
+}
+
+.privacy-intro {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-main);
+}
+
+.privacy-intro strong {
+  font-weight: 600;
+}
+
+/* "On this page" navigation */
+
+.privacy-toc {
+  margin: 28px 0 26px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  border: 1px solid var(--border-subtle);
+  background-color: var(--bg-alt);
+}
+
+.privacy-toc-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--text-label);
+}
+
+.privacy-toc-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.privacy-toc-links a {
+  font-size: 0.8rem;
+  border-radius: 999px;
+  padding: 4px 10px;
+  border: 1px solid var(--pill-border);
+  background-color: var(--pill-bg);
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+/* Allow hover styling where supported, but keep it simple */
+@media (hover: hover) and (pointer: fine) {
+  .privacy-toc-links a:hover {
+    text-decoration: none;
+    color: var(--text-main);
+    border-color: var(--border-subtle);
+  }
+}
+
+/* Content blocks */
+
+.privacy-section-block {
+  margin-top: 32px;
+  /* Fix for in-page anchor scroll with sticky headers:
+     ensures the section title isn't hidden when linked via #id */
+  scroll-margin-top: 80px;
+}
+
+.privacy-section-block:first-of-type {
+  margin-top: 0;
+}
+
+.privacy-section-block h2 {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--text-label);
+}
+
+.privacy-section-block h3 {
+  margin: 18px 0 6px;
+  font-size: 1rem;
+}
+
+.privacy-section-block p,
+.privacy-section-block li {
+  font-size: 0.97rem;
+  line-height: 1.7;
+  color: var(--text-main);
+}
+
+.privacy-section-block ul {
+  margin: 0 0 6px;
+  padding-left: 18px;
+}
+
+.privacy-section-block li {
+  margin-bottom: 4px;
+}
+
+/* Cards & grid */
+
+.privacy-card {
+  border-radius: 18px;
+  border: 1px solid var(--border-subtle);
+  background-color: var(--bg-alt);
+  padding: 16px 18px;
+}
+
+.privacy-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+.privacy-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+@media (min-width: 740px) {
+  .privacy-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Links inside the privacy content */
+
+.privacy-section a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Small footnote at bottom */
+
+.privacy-footnote {
+  margin-top: 28px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Mobile tweaks */
+
+@media (max-width: 740px) {
+  .privacy-section {
+    padding-top: 48px;
+    padding-bottom: 56px;
+  }
+
+  .privacy-toc {
+    padding: 14px 14px;
   }
 }

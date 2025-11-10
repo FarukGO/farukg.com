@@ -1,122 +1,235 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Tic Tac Toe: Ultimate+Infinite — Privacy Policy</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    :root{
-      --bg:#0c0f14; --card:#0f141b; --ink:#eaf0f7; --muted:#9bb0c8; --line:#1b2734; --accent:#4da3ff;
-    }
-    @media (prefers-color-scheme: light){
-      :root{ --bg:#ffffff; --card:#f7f9fc; --ink:#0d1b2a; --muted:#51657a; --line:#e6edf5; --accent:#0b5cff; }
-    }
-    *{ box-sizing:border-box }
-    body{ margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 ui-sans-serif,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif }
-    .wrap{ max-width:880px; margin:auto; padding:clamp(24px,4vw,48px) }
-    h1{ font:700 2rem/1.2 ui-serif,Georgia,serif; margin:.25rem 0 .25rem }
-    .meta{ color:var(--muted); margin:.25rem 0 1.25rem }
-    h2{ font:700 1.15rem/1.3 ui-serif,Georgia,serif; margin:2rem 0 .75rem }
-    p,li{ margin:.5rem 0 }
-    a{ color:var(--accent); text-decoration:none }
-    a:hover{ text-decoration:underline }
-    .card{ background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 18px }
-    .grid{ display:grid; gap:12px; grid-template-columns:1fr; }
-    @media (min-width:720px){ .grid{ grid-template-columns:1fr 1fr; } }
-    .note{ color:var(--muted); font-size:.95rem }
-    .footer{ margin-top:32px; padding-top:16px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem }
-    .toc a{ display:inline-block; margin-right:16px; font-size:.95rem }
-  </style>
-</head>
-<body>
-  <main class="wrap">
-    <h1>Privacy Policy</h1>
-    <p class="meta"><em>Effective: 1 November 2025</em></p>
+  <head>
+    <meta charset="utf-8" />
+    <title>Tic Tac Toe: Ultimate+Infinite — Privacy Policy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Privacy policy for Tic Tac Toe: Ultimate+Infinite, an Android game by Ethereon Studio. Learn how data is handled for ads, analytics, and crash reports."
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <div class="page privacy-page">
+      <main>
+        <section class="section privacy-section">
+          <div class="wrap">
+            <!-- Page header -->
+            <header class="privacy-header">
+              <h1 class="privacy-title">Privacy Policy</h1>
+              <p class="privacy-meta"><em>Effective: 1 November 2025</em></p>
+              <p class="privacy-intro">
+                <strong>Tic Tac Toe: Ultimate+Infinite</strong> is published by <strong>Ethereon Studio</strong>. This
+                policy explains what data is processed when you use the game, why it’s processed, who processes it, and
+                your choices.
+              </p>
+            </header>
 
-    <p><strong>Tic Tac Toe: Ultimate+Infinite</strong> is published by <strong>Ethereon Studio</strong>. This policy explains what data is processed when you use the game, why it’s processed, who processes it, and your choices.</p>
+            <!-- On this page -->
+            <nav class="privacy-toc" aria-label="Privacy policy sections">
+              <span class="privacy-toc-label">On this page</span>
+              <div class="privacy-toc-links">
+                <a href="#summary">Summary</a>
+                <a href="#data">Data we process</a>
+                <a href="#purposes">Purposes &amp; legal bases</a>
+                <a href="#choices">Your choices</a>
+                <a href="#sharing">Sharing</a>
+                <a href="#retention">Retention</a>
+                <a href="#children">Children</a>
+                <a href="#contact">Contact</a>
+              </div>
+            </nav>
 
-    <p class="toc">
-      <a href="#summary">Summary</a>
-      <a href="#data">Data we process</a>
-      <a href="#purposes">Purposes & legal bases</a>
-      <a href="#choices">Your choices</a>
-      <a href="#sharing">Sharing</a>
-      <a href="#retention">Retention</a>
-      <a href="#children">Children</a>
-      <a href="#contact">Contact</a>
-    </p>
+            <!-- Summary -->
+            <section id="summary" class="privacy-section-block">
+              <h2>Quick summary</h2>
+              <div class="privacy-card">
+                <ul>
+                  <li>No accounts; game state and settings are stored locally on your device.</li>
+                  <li>
+                    We use
+                    <a href="https://developers.google.com/admob" target="_blank" rel="noopener noreferrer"
+                      >Google AdMob</a
+                    >
+                    to show ads and
+                    <a href="https://firebase.google.com/" target="_blank" rel="noopener noreferrer">Firebase</a>
+                    (Analytics, Crashlytics, Performance) to understand usage and fix issues.
+                  </li>
+                  <li>
+                    Where required (for example in the EEA/UK/US states), we use Google’s
+                    <a href="https://support.google.com/admob/answer/10113005" target="_blank" rel="noopener noreferrer"
+                      >User Messaging Platform (UMP)</a
+                    >
+                    to obtain and honor your consent preferences. You can revisit them in
+                    <strong>Settings → Privacy &amp; Consent</strong>.
+                  </li>
+                </ul>
+              </div>
+            </section>
 
-    <h2 id="summary">Quick summary</h2>
-    <div class="card">
-      <ul>
-        <li>No accounts; game state and settings are stored locally on your device.</li>
-        <li>We use <a href="https://developers.google.com/admob" target="_blank" rel="noopener">Google AdMob</a> to show ads and <a href="https://firebase.google.com/" target="_blank" rel="noopener">Firebase</a> (Analytics, Crashlytics, Performance) to understand usage and fix issues.</li>
-        <li>Where required (for example in the EEA/UK/US states), we use Google’s <a href="https://support.google.com/admob/answer/10113005" target="_blank" rel="noopener">User Messaging Platform (UMP)</a> to obtain and honor your consent preferences. You can revisit them in <strong>Settings → Privacy &amp; Consent</strong>.</li>
-      </ul>
+            <!-- Data we process -->
+            <section id="data" class="privacy-section-block">
+              <h2>Data we process</h2>
+
+              <div class="privacy-grid">
+                <div class="privacy-card">
+                  <strong>On-device only</strong>
+                  <p>
+                    Game progress, difficulty, and other in-game settings are saved locally on your device. We don’t run
+                    our own servers for this game.
+                  </p>
+                </div>
+
+                <div class="privacy-card">
+                  <strong>Advertising (AdMob)</strong>
+                  <p>
+                    The Google Mobile Ads SDK may process: Advertising ID / App Set ID, IP address (for approximate
+                    location), device/OS info, and ad interactions. Google may use this data for ad delivery,
+                    measurement, and fraud prevention; some of this data is shared within the ads ecosystem. You can opt
+                    out of personalized ads via consent and/or system settings.
+                  </p>
+                  <p class="privacy-note">
+                    Details:
+                    <a
+                      href="https://developers.google.com/admob/android/privacy/play-data-disclosure"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >AdMob data disclosures</a
+                    >
+                  </p>
+                </div>
+
+                <div class="privacy-card">
+                  <strong>Analytics (Firebase Analytics)</strong>
+                  <p>
+                    Anonymous/aggregated usage events (e.g., screen views, session counts) help improve gameplay and UX.
+                    We don’t use Analytics features that link to ads unless you’ve consented where required.
+                  </p>
+                  <p class="privacy-note">
+                    Details:
+                    <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer"
+                      >Firebase privacy</a
+                    >
+                  </p>
+                </div>
+
+                <div class="privacy-card">
+                  <strong>Diagnostics (Crashlytics &amp; Performance)</strong>
+                  <p>
+                    Crash reports and performance metrics (startup time, network reliability) help us find and fix
+                    issues. These SDKs act as service providers processing data on our behalf.
+                  </p>
+                  <p class="privacy-note">
+                    Details:
+                    <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer"
+                      >Firebase privacy</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <!-- Purposes & legal bases -->
+            <section id="purposes" class="privacy-section-block">
+              <h2>Why we process data &amp; legal bases</h2>
+              <ul>
+                <li><strong>App functionality &amp; improvement</strong> (gameplay, stability, performance).</li>
+                <li><strong>Advertising</strong> (showing, measuring, and improving ads; fraud prevention).</li>
+              </ul>
+              <p>
+                <strong>Legal bases.</strong> In the EEA/UK we rely on <strong>consent</strong> for ads and analytics.
+                If you decline, we show non-personalized ads and limit analytics signals. Outside those regions, we rely
+                on legitimate interests to maintain the game and prevent fraud, and consent where required by law.
+              </p>
+            </section>
+
+            <!-- Choices -->
+            <section id="choices" class="privacy-section-block">
+              <h2>Your choices</h2>
+              <ul>
+                <li>
+                  <strong>Consent &amp; preferences:</strong> Open <em>Settings → Privacy &amp; Consent</em> in the game
+                  to review your choices.
+                </li>
+                <li><strong>Ads personalization:</strong> Reset or limit the Advertising ID in Android Settings.</li>
+              </ul>
+            </section>
+
+            <!-- Sharing -->
+            <section id="sharing" class="privacy-section-block">
+              <h2>Sharing</h2>
+              <p>
+                We don’t sell personal information. We share data with service providers that enable the game—primarily
+                Google (AdMob and Firebase). AdMob may “share” certain data within the advertising ecosystem for
+                delivery, measurement, and fraud prevention. See Google’s pages for details:
+              </p>
+              <ul>
+                <li>
+                  <a
+                    href="https://developers.google.com/admob/android/privacy/play-data-disclosure"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >AdMob data disclosures</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://policies.google.com/technologies/partner-sites"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >How Google uses information from partner apps</a
+                  >
+                </li>
+              </ul>
+            </section>
+
+            <!-- Retention -->
+            <section id="retention" class="privacy-section-block">
+              <h2>Retention</h2>
+              <p>
+                We don’t host your game data. Third-party providers retain data under their own policies/settings
+                (examples: Crashlytics commonly retains reports around 90 days; Firebase Analytics retention is
+                configurable, e.g., 2–14 months). See provider documentation for current details.
+              </p>
+            </section>
+
+            <!-- International transfers -->
+            <section class="privacy-section-block">
+              <h2>International transfers</h2>
+              <p>
+                Google may process data on servers outside your country (e.g., the US). Google provides contractual
+                safeguards as described in their terms.
+              </p>
+            </section>
+
+            <!-- Children -->
+            <section id="children" class="privacy-section-block">
+              <h2>Children</h2>
+              <p>
+                This game is <strong>not directed to children</strong>. If you believe a minor has used the game,
+                contact us and we’ll work with our providers to address it.
+              </p>
+            </section>
+
+            <!-- Contact -->
+            <section id="contact" class="privacy-section-block">
+              <h2>Contact</h2>
+              <p>
+                Publisher: <strong>Ethereon Studio</strong><br />
+                Email:
+                <a href="mailto:ethereon.studio@gmail.com">ethereon.studio@gmail.com</a>
+              </p>
+            </section>
+
+            <!-- Footnote -->
+            <div class="privacy-footnote">
+              <p>We may update this policy; we’ll post changes here with a new effective date.</p>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
-
-    <h2 id="data">Data we process</h2>
-    <div class="grid">
-      <div class="card">
-        <strong>On-device only</strong>
-        <p>Game progress, difficulty, sound/vibration, and other preferences are saved locally (Android DataStore). We don’t run our own servers for this game.</p>
-      </div>
-
-      <div class="card">
-        <strong>Advertising (AdMob)</strong>
-        <p>The Google Mobile Ads SDK may process: Advertising ID / App Set ID, IP address (for approximate location), device/OS info, and ad interactions. Google may use this data for ad delivery, measurement, and fraud prevention; some of this data is shared within the ads ecosystem. You can opt out of personalized ads via consent and/or system settings.</p>
-        <p class="note">Details: <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure" target="_blank" rel="noopener">AdMob data disclosures</a></p>
-      </div>
-
-      <div class="card">
-        <strong>Analytics (Firebase Analytics)</strong>
-        <p>Anonymous/aggregated usage events (e.g., screen views, session counts) help improve gameplay and UX. We don’t use Analytics features that link to ads unless you’ve consented where required.</p>
-        <p class="note">Details: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase privacy</a></p>
-      </div>
-
-      <div class="card">
-        <strong>Diagnostics (Crashlytics &amp; Performance)</strong>
-        <p>Crash reports and performance metrics (startup time, network reliability) help us find and fix issues. These SDKs act as service providers processing data on our behalf.</p>
-        <p class="note">Details: <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase privacy</a></p>
-      </div>
-    </div>
-
-    <h2 id="purposes">Why we process data &amp; legal bases</h2>
-    <ul>
-      <li><strong>App functionality & improvement</strong> (gameplay, stability, performance).</li>
-      <li><strong>Advertising</strong> (showing, measuring, and improving ads; fraud prevention).</li>
-    </ul>
-    <p><strong>Legal bases.</strong> In the EEA/UK we rely on <strong>consent</strong> for ads and analytics. If you decline, we show non-personalized ads and limit analytics signals. Outside those regions, we rely on legitimate interests to maintain the game and prevent fraud, and consent where required by law.</p>
-
-    <h2 id="choices">Your choices</h2>
-    <ul>
-      <li><strong>Consent &amp; preferences:</strong> Open <em>Settings → Privacy &amp; Consent</em> in the game to review your choices.</li>
-      <li><strong>Ads personalization:</strong> Reset or limit the Advertising ID in Android Settings.</li>
-    </ul>
-
-    <h2 id="sharing">Sharing</h2>
-    <p>We don’t sell personal information. We share data with service providers that enable the game—primarily Google (AdMob and Firebase). AdMob may “share” certain data within the advertising ecosystem for delivery, measurement, and fraud prevention. See Google’s pages for details:</p>
-    <ul>
-      <li><a href="https://developers.google.com/admob/android/privacy/play-data-disclosure" target="_blank" rel="noopener">AdMob data disclosures</a></li>
-      <li><a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from partner apps</a></li>
-    </ul>
-
-    <h2 id="retention">Retention</h2>
-    <p>We don’t host your game data. Third-party providers retain data under their own policies/settings (examples: Crashlytics commonly retains reports around 90 days; Firebase Analytics retention is configurable, e.g., 2–14 months). See provider documentation for current details.</p>
-
-    <h2>International transfers</h2>
-    <p>Google may process data on servers outside your country (e.g., the US). Google provides contractual safeguards as described in their terms.</p>
-
-    <h2 id="children">Children</h2>
-    <p>This game is <strong>not directed to children</strong>. If you believe a minor has used the game, contact us and we’ll work with our providers to address it.</p>
-
-    <h2 id="contact">Contact</h2>
-    <p>Publisher: <strong>Ethereon Studio</strong><br>
-       Email: <a href="mailto:ethereon.studio@gmail.com">ethereon.studio@gmail.com</a></p>
-
-    <div class="footer">
-      <p>We may update this policy; we’ll post changes here with a new effective date.</p>
-    </div>
-  </main>
-</body>
+  </body>
 </html>

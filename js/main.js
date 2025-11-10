@@ -147,4 +147,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // Auto-set copyright year in footer (if present)
+  const yearEl = document.getElementById("copyright-year");
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
 });
