@@ -555,10 +555,26 @@ body {
 
 .footer-inner {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 16px;
   font-size: 0.8rem;
   color: var(--text-label);
+}
+
+.footer-link {
+  font-size: 0.8rem;
+  color: var(--text-label);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .footer-link:hover {
+    text-decoration: underline;
+    color: var(--text-main);
+  }
 }
 
 /* Responsive */
